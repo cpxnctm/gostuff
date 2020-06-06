@@ -6,6 +6,8 @@ import (
 
 //Create a program that uses a switch statement with the switch expression specified as a variable of TYPE string with the IDENTIFIER “favSport”.
 
+//const favSport = "football"
+
 func main() {
 	favSport := "football"
 	switch favSport {
