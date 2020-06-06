@@ -15,5 +15,8 @@ func main() {
 		fmt.Println("driving is fun")
 	case ("football"):
 		fmt.Println("football is fun to watch")
+		fallthrough
+	case ("baseball"):
+		fmt.Println("this prints because of fallthrough")
 	}
 }
