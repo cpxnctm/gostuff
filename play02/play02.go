@@ -9,4 +9,6 @@ func main() {
 	fmt.Println(b)
 	xab := [][]string{a, b}
 	fmt.Println(xab)
+	c := (b[0:1])
+	fmt.Println(c)
 }
