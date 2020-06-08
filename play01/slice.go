@@ -9,7 +9,7 @@ func main() {
 	// print the index values and the integer values
 	y := []int{100, 200, 300, 400, 500}
 	x = append(x, y...)
-	fmt.Println(x)
+	fmt.Println(x[0:1][4:7])
 	for a, b := range x {
 		fmt.Printf("At index location %v is: %v\n", a, b)
 
