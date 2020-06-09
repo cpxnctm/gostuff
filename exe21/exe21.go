@@ -12,8 +12,8 @@ func main() {
 	x = append(x, 53, 54, 55)
 	fmt.Println(x)
 	y := []int{56, 57, 58, 59, 60}
-	xy := append(x, y...)
-	fmt.Println(xy)
+	x = append(x, y...)
+	fmt.Println(x)
 
 	for r := 0; r < 18; r++ {
 		fmt.Printf("%T\n", r)
