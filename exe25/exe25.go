@@ -16,7 +16,15 @@ func main() {
 		fmt.Printf("For record: %v\n", k)
 		for l, v2 := range v {
 			fmt.Printf("The entry is: %v and the index position is: %v\n", v2, l)
-		}
+			x[`people`] = []string{`driving`, `cooking`, `gaming`, `drinking`}
+			for k, v := range x {
+				fmt.Printf("For record: %v\n", k)
+				for l, v2 := range v {
+					fmt.Printf("The entry is: %v and the index position is: %v\n", v2, l)
 
+				}
+
+			}
+		}
 	}
 }
