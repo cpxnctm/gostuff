@@ -9,9 +9,14 @@ func main() {
 
 	x := map[string][]string{
 		`cats`: []string{`meow`, `treats`, `lasers`, `sleep`},
-		'dogs': []string{`woof`, 'bones','fetching','pets'},
-		'fish': []string{`swimming`, `breathing`,`watching`,`floating`}
-		fmt.Println(x)
+		`dogs`: []string{`woof`, `bones`, `fetching`, `pets`},
+		`fish`: []string{`swimming`, `breathing`, `watching`, `floating`},
+	}
+	for k, v := range x {
+		fmt.Printf("For record: %v\n", k)
+		for l, v2 := range v {
+			fmt.Printf("The entry is: %v and the index position is: %v\n", v2, l)
+		}
 
 	}
 }
