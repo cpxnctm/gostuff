@@ -21,7 +21,9 @@ func main() {
 		purchased: false,
 	}
 	fmt.Println(f1.name, f2.name)
-	if f2.purchased == false {
+	if f2.purchased && f1.purchased == false {
 		fmt.Println("sad face!")
+	} else {
+		fmt.Println("missed opportunity")
 	}
 }
