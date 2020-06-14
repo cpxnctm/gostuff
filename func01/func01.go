@@ -4,29 +4,20 @@ import (
 	"fmt"
 )
 
-type person struct {
-	first string
-	last string
-}
-type secretAgent struct {
-	person
-	ltk bool
+type thing struct {
+	name string
+	age  int
 }
 
- func (s, secretAgent) speak () {
-	fmt.Println("Hello, ", s.first, s.last)
- }
-func main (){
- sa1 := secretAgent {
-	 person:person {
-		 "james",
-		 "bond",
-	 }
-	 ltk: true
+func (t thing) hey() {
+	fmt.Println("Hey there, ", t.name)
+}
+func main() {
+	x := thing{
+		name: "bob",
+		age:  30,
 	}
-	fmt.Println(sa1)
-	sa1.speak
+	fmt.Println(x)
+	x.hey()
 
-	
-	
 }
