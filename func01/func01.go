@@ -10,14 +10,19 @@ type thing struct {
 }
 
 func (t thing) hey() {
-	fmt.Println("Hey there, ", t.name)
+	fmt.Println("Hey there,", t.name)
 }
 func main() {
 	x := thing{
 		name: "bob",
 		age:  30,
 	}
+	y := thing{
+		name: "joe",
+		age:  31,
+	}
 	fmt.Println(x)
 	x.hey()
+	y.hey()
 
 }
