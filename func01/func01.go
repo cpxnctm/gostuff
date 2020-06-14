@@ -9,7 +9,7 @@ type thing struct {
 	age  int
 }
 
-func (t thing) hey() {
+func (t thing) hey() { //method definition
 	fmt.Println("Hey there,", t.name)
 }
 func main() {
@@ -22,7 +22,7 @@ func main() {
 		age:  31,
 	}
 	fmt.Println(x)
-	x.hey()
+	x.hey() //calling the method. the function that it is attached to is called as func.method
 	y.hey()
 
 }
