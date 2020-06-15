@@ -16,7 +16,7 @@ func sum(x ...int) int { //create the sum func
 	}
 	return n //return the value n
 }
-func evenSum(f func(x ...int) int, y ...int) int { // the evenSum func has parameters of unlimited ints assigned to f and returns an int. it also takes in unlimited ints assigned to y
+func evenSum(f func(x ...int) int, y ...int) int { // the evenSum function expects a parameter with at least one integer and will return an integer. the sum function fulfills this and the slice of int from t fulfills the second parameter which expects at least one integer and assigns those values to y
 	var xi []int          //creates a slice of int assigned to var xi
 	for _, v := range y { //range over the values passed in from y and tosses out the index
 		if v%2 == 0 { //to find the even numbers, divide by two and check for a zero remainder
