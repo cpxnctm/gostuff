@@ -10,16 +10,16 @@ import (
 func main() {
 	a := foo(2)
 	fmt.Println(a)
-	b := bar()
-	fmt.Println(b, c)
+	fmt.Println(bar)
 }
 func foo(x int) int {
 	for i := 0; i < 10; i++ {
 		return i
 	}
 }
-func bar(int, string) {
+func bar() (string, int) {
 	b := "i'm writing code"
 	c := 451
-
+	return "", b
+	return "", c
 }
