@@ -7,6 +7,7 @@ func main() {
 	ii := []int{1, 3, 5, 7, 9, 11, 13, 15, 17, 19}
 	x2 := bar(ii)
 	fmt.Println(x1)
+	defer skip()
 	fmt.Println(x2)
 }
 
@@ -24,4 +25,8 @@ func bar(y []int) int {
 		b += v
 	}
 	return b
+}
+
+func skip() {
+	fmt.Println("This should show up at the end.")
 }
