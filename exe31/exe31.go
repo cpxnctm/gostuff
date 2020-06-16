@@ -1,25 +1,26 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 //create a function named foo that returns an int
 //create a function named bar that returns an int and a string
 // call both functions and print their results
 func main() {
-	a := foo(2)
-	fmt.Println(a)
-	fmt.Println(bar)
+	x := foo()
+	fmt.Println(x)
+	y, z := bar()
+	fmt.Println(y, z)
 }
-func foo(x int) int {
-	for i := 0; i < 10; i++ {
-		return i
+
+func foo() int {
+	a := 0
+	for a := 0; a <= 50; a++ {
 	}
+	return a
 }
-func bar() (string, int) {
-	b := "i'm writing code"
-	c := 451
-	return "", b
-	return "", c
+
+func bar() (int, string) {
+	b := ("The world is a big place!")
+	c := 5
+	return c, b
 }
