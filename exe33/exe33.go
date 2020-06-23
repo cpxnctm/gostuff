@@ -2,23 +2,23 @@ package main
 
 import "fmt"
 
-type person struct {
+type animal struct {
 	first string
 	last  string
 	age   int
 }
 
-func (s person) speak() { // scope is important...
+func (s animal) speak() { // scope is important...
 	fmt.Printf("My name is %s, my last name is, %s and I'm %v years old\n", s.first, s.last, s.age)
 }
 func main() {
 
-	x := person{
+	x := animal{
 		first: "bootsy",
 		last:  "kitty",
 		age:   9,
 	}
-	y := person{
+	y := animal{
 		first: "beta",
 		last:  "doggo",
 		age:   1,

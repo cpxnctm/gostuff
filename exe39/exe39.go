@@ -14,7 +14,6 @@ func main() {
 	foo(&x)
 	fmt.Println(&x)
 	bar(&x)
-	fmt.Println(&x)
 	fmt.Println(x)
 }
 func foo(p *person) {

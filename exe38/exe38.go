@@ -5,7 +5,7 @@ import "fmt"
 // write a callback...
 
 func main() {
-	a := []int{1, 2, 3, 4, 5}
+	a := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
 	ad := add(a...)
 	fmt.Println(ad)
 	b := odds(add, ad)

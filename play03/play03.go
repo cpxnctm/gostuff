@@ -12,13 +12,14 @@ func main() {
 	fmt.Println(f())
 	fmt.Println(f())
 	fmt.Println(f())
+	fmt.Println(f())
+	fmt.Println(f())
+
 }
 func foo() func() int {
-	x := 2
-	y := 3
+	x := 0
 	return func() int {
-		x *= x
-		y++
+		x++
 		return x
 	}
 
