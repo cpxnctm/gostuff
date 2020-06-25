@@ -14,9 +14,9 @@ type pet struct {
 
 func main() {
 	p := `[{"Name":"Bootsy","Animal":"Kitty","Age":9,"Cute":true},{"Name":"Beta","Animal":"Pupper","Age":1,"Cute":true}]`
-	xp := []byte(p)
+	xp := []byte(p) //convert the composite literal into a slice of bytes which is required for the unmarshal function to run
 
-	animals := []pet{}
+	animals := []pet{} // convert the struct to a slice
 	//fmt.Printf("%T\n", animals)
 
 	err := json.Unmarshal(xp, &animals)

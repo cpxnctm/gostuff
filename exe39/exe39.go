@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-type person struct {
+type pet struct {
 	name string
 }
 
 func main() {
-	x := person{
+	x := pet{
 		name: "Beta Pupper",
 	}
 	fmt.Println(x)
@@ -16,10 +16,10 @@ func main() {
 	bar(&x)
 	fmt.Println(x)
 }
-func foo(p *person) {
+func foo(p *pet) {
 	p.name = "Bootsy Kitty"
 
 }
-func bar(p2 *person) {
+func bar(p2 *pet) {
 	p2.name = "Buff Kitty"
 }
