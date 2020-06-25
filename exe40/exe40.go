@@ -12,6 +12,7 @@ import (
 var counter int
 var counter2 int
 var wg sync.WaitGroup
+var wg2 sync.WaitGroup
 var mu sync.Mutex
 
 func main() {
@@ -21,6 +22,7 @@ func main() {
 	lim := 50
 	lim2 := 50
 	wg.Add(lim)
+	wg2.Add(lim2)
 
 	for a := 0; a < lim; a++ {
 		go func() {
@@ -41,14 +43,15 @@ func main() {
 		go func() {
 			mu.Lock()
 			d := counter2
-			fmt.Println("This is the second Goroutine:", runtime.NumGoroutine())
+			fmt.Println("This is the second Goroutine:", counter2)
 			counter2 = d
 			mu.Unlock()
 			fmt.Println("-----------------------")
-			wg.Done()
+			wg2.Done()
 		}()
 	}
 	wg.Wait()
-	fmt.Println("Routines Complete")
+	wg2.Wait()
+	fmt.Println("Routines Completed")
 
 }
