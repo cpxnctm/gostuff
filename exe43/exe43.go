@@ -10,8 +10,10 @@ var mu sync.Mutex
 
 func main() {
 
-	lim := 50
+	lim := 100
+	lim2 := 100
 	counter := 0
+	counter1 := 0
 	wg.Add(lim)
 
 	go func() {
@@ -21,6 +23,17 @@ func main() {
 			i++
 			counter = i
 			fmt.Println(counter)
+			mu.Unlock()
+			wg.Done()
+		}
+	}()
+	go func() {
+		for i := 0; i < lim2; i++ {
+			mu.Lock()
+			i := counter1
+			i++
+			counter1 = i
+			fmt.Println(counter1)
 			mu.Unlock()
 			wg.Done()
 		}
