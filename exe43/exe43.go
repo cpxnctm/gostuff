@@ -6,6 +6,7 @@ import (
 )
 
 var wg sync.WaitGroup
+var wg2 sync.WaitGroup
 var mu sync.Mutex
 
 func main() {
@@ -15,6 +16,7 @@ func main() {
 	counter := 0
 	counter1 := 0
 	wg.Add(lim)
+	wg2.Add(lim)
 
 	go func() {
 		for i := 0; i < lim; i++ {
@@ -35,10 +37,11 @@ func main() {
 			counter1 = i
 			fmt.Println(counter1)
 			mu.Unlock()
-			wg.Done()
+			wg2.Done()
 		}
 	}()
 	wg.Wait()
+	wg2.Wait()
 	fmt.Println("Program Exiting")
 
 }
