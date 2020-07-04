@@ -17,7 +17,7 @@ func receive(n <-chan int) {
 	}
 }
 
-func gen() <-chan int {
+func gen() <-chan int { //since it was specified that there would be a return, don't forget to send it back
 	c := make(chan int)
 
 	go func() {
