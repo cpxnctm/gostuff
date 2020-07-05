@@ -8,7 +8,7 @@ func main() {
 	q := make(chan int)
 	c := gen(q)
 
-	receive(c, q)
+	receive(c)
 
 	fmt.Println("about to exit")
 }
@@ -21,6 +21,12 @@ func gen(q <-chan int) <-chan int {
 	for i := 0; i < 100; i++ {
 		c <- i
 	}
-
+	close(c)
 	return c
+}
+
+func receive(n <-chan int) {
+	for i := range n {
+		fmt.Println(i)
+	}
 }
