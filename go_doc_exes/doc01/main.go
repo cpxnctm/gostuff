@@ -7,11 +7,12 @@ import (
 )
 
 func main() {
-	a, b := dog.Years(-7)
+	age := -20
+	a, b := dog.Years(age)
 	if a == 0 {
 		fmt.Println(b)
 	} else {
-		fmt.Println(a)
+		fmt.Printf("Your dog is %v human years old, and that's %v in doggo years.", age, a)
 	}
 
 }
