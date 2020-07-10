@@ -1,9 +1,10 @@
-package dog
+package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	a := Years(32)
+	a := dog.Years(7)
 	fmt.Println(a)
-
 }
