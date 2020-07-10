@@ -7,6 +7,11 @@ import (
 )
 
 func main() {
-	a := dog.Years(-7)
-	fmt.Println(a)
+	a, b := dog.Years(-7)
+	if a == 0 {
+		fmt.Println(b)
+	} else {
+		fmt.Println(a)
+	}
+
 }

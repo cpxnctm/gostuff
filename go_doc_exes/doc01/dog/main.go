@@ -8,7 +8,7 @@ func Years(n int) (int, string) {
 	if n > 0 {
 		a = (n * 7)
 	} else {
-		b = "error"
+		b = "Invalid age provided. Ages cannot be negative."
 	}
 	return a, b
 
