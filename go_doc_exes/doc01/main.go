@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	age := -20
+	age := 15
 	a, b := dog.Years(age)
 	if a == 0 {
 		fmt.Println(b)
