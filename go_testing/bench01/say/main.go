@@ -6,5 +6,5 @@ import "fmt"
 
 //Kind takes in a string and adds: Have a great day
 func Kind(s string) string {
-	return fmt.Sprint("Have a great day,", s)
+	return fmt.Sprint("Have a great day, ", s)
 }

@@ -1,5 +1,12 @@
 package main
 
+import (
+	"fmt"
+
+	"github.com/cpxnctm/gostuff/go_testing/bench01/say"
+)
+
 func main() {
-	say.kind("Beta")
+	a := say.Kind("Beta")
+	fmt.Println(a)
 }
