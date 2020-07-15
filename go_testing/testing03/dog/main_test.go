@@ -1,6 +1,7 @@
 package dog
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -16,4 +17,10 @@ func BenchTestYearsTwo(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		YearsTwo(7)
 	}
+}
+
+func ExampleTestYearsTwo() {
+	fmt.Println(YearsTwo(7))
+	//Output:
+	//49
 }
