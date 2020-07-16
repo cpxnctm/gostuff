@@ -4,6 +4,7 @@ import (
 	"strings"
 )
 
+//UseCount takes in a string and returns the number of occurrences for each word
 // no need to write an example for this one
 // writing a test for this one is a bonus challenge; harder
 func UseCount(s string) map[string]int {
@@ -15,7 +16,7 @@ func UseCount(s string) map[string]int {
 	return m
 }
 
-// Count takes in a string and returns the number of words separated by whitespace
+// Count takes in a string and returns the number of total words separated by whitespace
 func Count(s string) int {
 	st := strings.Fields(s)
 	ct := 0
