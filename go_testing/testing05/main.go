@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-
+"github.com/cpxnctm/gostuff/tree/master/go_testing/testing05/mymath"
 )
 
 func main() {
