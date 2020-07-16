@@ -29,6 +29,6 @@ func Count(s string) int {
 // Better should be a more efficient word counting function than Count
 func Better(s string) int{
 	st := strings.Fields(s)
-	return len(st)
+	return len(st) -1
 }
 
