@@ -20,10 +20,15 @@ func UseCount(s string) map[string]int {
 func Count(s string) int {
 	st := strings.Fields(s)
 	ct := 0
-	//var m2 []int
 	for i := range st {
 		ct = i
-		//m2[i]++
 	}
 	return ct
 }
+
+// Better should be a more efficient word counting function than Count
+func Better(s string) int{
+	st := strings.Fields(s)
+	return len(st)
+}
+
