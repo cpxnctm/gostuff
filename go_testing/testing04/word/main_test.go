@@ -25,6 +25,7 @@ func BenchmarkCount(b *testing.B) {
 		Count(quote.SunAlso)
 	}
 }
+
 func ExampleBetter(){
 	fmt.Println(Better(quote.SunAlso))
 	//Output:
@@ -43,7 +44,32 @@ func BenchmarkBetter(b *testing.B) {
 		Better(quote.SunAlso)
 	}
 }
+func BenchmarkUseCount(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		UseCount(quote.SunAlso)
+	}
 
+}
+func TestUseCount(t *testing.T) {
+	a := UseCount("cat dog fox fox fox cat dog dog")
+	for k, v := range a{
+		switch k {
+		case "cat":
+			if v != 2{
+				t.Error("Expected 2, got:", v)
+			}
+		case "dog":
+			if v != 3{
+				t.Error("Expected 3, got:", v)
 
+			}
+		case "fox":
+			if v != 3{
+				t.Error("Expected 3, got:", v)
+			}
+		}
+	}
+
+}
 
 
