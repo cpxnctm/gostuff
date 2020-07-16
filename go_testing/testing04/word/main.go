@@ -17,11 +17,9 @@ func UseCount(s string) map[string]int {
 
 // Count takes in a string and returns the number of words separated by whitespace
 func Count(s string) int {
-	// write the code for this func
 	st := strings.Fields(s)
 	ct := 0
 	//var m2 []int
-
 	for i := range st {
 		ct = i
 		//m2[i]++
